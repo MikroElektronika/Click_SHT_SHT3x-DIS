@@ -1,6 +1,4 @@
 ![MikroE](http://www.mikroe.com/img/designs/beta/logo_small.png)
-#SHT click#
-##By [MikroElektronika](http://www.mikroe.com)
 
 ![SHT_click](http://cdn.mikroe.com/knowlegebase/uploads/2016/05/04181934/sht-click-learn-banner-730x410.jpg)
 
