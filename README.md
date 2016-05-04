@@ -3,6 +3,9 @@
 > ##By [MikroElektronika](http://www.mikroe.com)
 ---
 
+![SHT_click](http://cdn.mikroe.com/knowlegebase/uploads/2016/05/04181934/sht-click-learn-banner-730x410.jpg)
+
+---
 [Product Page](http://www.mikroe.com/click/sht/)
 
 [Manual Page](http://docs.mikroe.com/SHT_click)
@@ -10,6 +13,7 @@
 [Learn Page](http://learn.mikroe.com/leader-humidity-measurement-sht/)
 
 ---
+
 ### General Description
 SHT3x-DIS is the next generation of Sensirion’s temperature and 
 humidity sensors. It builds on a new CMOSens sensor chip that is at 
@@ -19,6 +23,8 @@ accuracy specifications compared to its predecessor. Its functionality
 includes enhanced signal processing, two distinctive and user 
 selectable I2C addresses and communication speeds of up to 1 MHz.
 
+---
+
 ### Features
 * Fully calibrated, linearized, and temperature compensated digital output
 * Wide supply voltage range, from 2.4 V to 5.5 V
@@ -26,16 +32,22 @@ selectable I2C addresses and communication speeds of up to 1 MHz.
 * Typical accuracy of 2 % RH and 0.3 °C
 * Very fast start-up and measurement time
 
+---
+
 ### Installation
 Use the package manager to install the library for your architecture.
 
-### Example how to use the library
+---
+
+### Example
+
 #### Configuration
 * MCU:             STM32F107VC
 * Dev.Board:       EasyMx Pro v7
 * Oscillator:      72 Mhz internal
 * Ext. Modules:    SHT Click
 * SW:              MikroC PRO for ARM 4.7.0
+
 ```
 #include "SHT_hw.h"
 #include "resources.h"
