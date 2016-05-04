@@ -3,6 +3,9 @@
 > ##By [MikroElektronika](http://www.mikroe.com)
 ---
 
+![Product Page](http://www.mikroe.com/click/sht/)
+
+---
 ### General Description
 SHT3x-DIS is the next generation of Sensirion’s temperature and 
 humidity sensors. It builds on a new CMOSens sensor chip that is at 
