@@ -1,6 +1,6 @@
-> ![MikroE](http://www.mikroe.com/img/designs/beta/logo_small.png)
-> #SHT click#
-> ##By [MikroElektronika](http://www.mikroe.com)
+![MikroE](http://www.mikroe.com/img/designs/beta/logo_small.png)
+#SHT click#
+##By [MikroElektronika](http://www.mikroe.com)
 ---
 
 ![SHT_click](http://cdn.mikroe.com/knowlegebase/uploads/2016/05/04181934/sht-click-learn-banner-730x410.jpg)
@@ -31,11 +31,6 @@ selectable I2C addresses and communication speeds of up to 1 MHz.
 * I2C Interface with communication speeds up to 1 MHz and two user selectable addresses
 * Typical accuracy of 2 % RH and 0.3 °C
 * Very fast start-up and measurement time
-
----
-
-### Installation
-Use the package manager to install the library for your architecture.
 
 ---
 
