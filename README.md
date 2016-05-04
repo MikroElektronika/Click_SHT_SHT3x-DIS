@@ -3,7 +3,7 @@
 > ##By [MikroElektronika](http://www.mikroe.com)
 ---
 
-![Product Page](http://www.mikroe.com/click/sht/)
+[Product Page](http://www.mikroe.com/click/sht/)
 
 ---
 ### General Description
