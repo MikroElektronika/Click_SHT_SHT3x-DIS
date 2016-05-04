@@ -40,7 +40,7 @@ selectable I2C addresses and communication speeds of up to 1 MHz.
 * Dev.Board:       EasyMx Pro v7
 * Oscillator:      72 Mhz internal
 * Ext. Modules:    SHT Click
-* SW:              MikroC PRO for ARM 4.7.0
+* SW:              MikroC PRO for ARM 4.7.4
 
 ```
 #include "SHT_hw.h"
