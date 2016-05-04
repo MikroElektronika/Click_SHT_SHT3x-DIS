@@ -4,7 +4,8 @@
 ---
 
 [Product Page](http://www.mikroe.com/click/sht/)
-[Learn Page]()
+
+[Learn Page](http://learn.mikroe.com/leader-humidity-measurement-sht/)
 
 ---
 ### General Description
