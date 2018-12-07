@@ -1,0 +1,72 @@
+'
+'Example for SHT Click
+'
+'    Date          : okt 2018.
+'    Author        : Dusan Poluga
+'
+'Test configuration PIC :
+'    
+'    MCU             : P18F87K22
+'    Dev. Board      : EasyPIC PRO v7
+'    PIC Compiler ver : v7.2.0.0
+'
+'---
+'
+'Description :
+'
+'The application is composed of three sections :
+'
+'- System Initialization - Initialize GPIO and communication structures.
+'- Application Initialization - Initialize the communication interface and
+'                               configure the click board.
+'- Application Task - Temperature and humidity data is measured and read from
+'                   the sensor. After the data has been read it is displayed
+'                   on the serial port.
+'
+program Click_SHT_PIC
+
+include Click_SHT_types
+include Click_SHT_config
+sub procedure systemInit() 
+    mikrobus_gpioInit(_MIKROBUS1, _MIKROBUS_INT_PIN, _GPIO_INPUT) 
+    mikrobus_gpioInit(_MIKROBUS1, _MIKROBUS_RST_PIN, _GPIO_OUTPUT) 
+    mikrobus_i2cInit(_MIKROBUS1, @_SHT_I2C_CFG[0]) 
+    mikrobus_logInit(_LOG_USBUART, 9600) 
+    Delay_ms(100) 
+end sub
+
+sub procedure applicationInit() 
+    sht_i2cDriverInit(T_SHT_P(@_MIKROBUS1_GPIO), T_SHT_P(@_MIKROBUS1_I2C), SHT_I2C_ADDR0) 
+    mikrobus_logWrite("System Initialized", _LOG_LINE) 
+    Delay_ms(100) 
+end sub
+
+sub procedure applicationTask() 
+dim
+    temperature as float 
+    humidity as float 
+    text as char[15] 
+
+    Delay_ms(1500) 
+    temperature = sht_temp_ss() 
+    FloatToStr(temperature, @text[0]) 
+    mikrobus_logWrite("Temperature: ", _LOG_TEXT) 
+    mikrobus_logWrite(@text[0], _LOG_TEXT) 
+    mikrobus_logWrite("°C", _LOG_LINE) 
+    Delay_ms(200) 
+    humidity = sht_hum_ss() 
+    FloatToStr(humidity, @text[0]) 
+    mikrobus_logWrite("Humidity: ", _LOG_TEXT) 
+    mikrobus_logWrite(@text[0], _LOG_TEXT) 
+    mikrobus_logWrite("%", _LOG_LINE) 
+    Delay_ms(200) 
+end sub
+
+main :
+
+    systemInit() 
+    applicationInit() 
+    while (1) 
+        applicationTask() 
+    wend
+end.

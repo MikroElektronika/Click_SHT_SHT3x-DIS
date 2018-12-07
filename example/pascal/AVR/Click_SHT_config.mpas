@@ -1,0 +1,8 @@
+unit Click_SHT_config;
+
+uses Click_SHT_types;
+
+const
+    _SHT_I2C_CFG : array[1] of uint32_t = (100000); 
+    
+end.
